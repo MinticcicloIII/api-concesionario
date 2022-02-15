@@ -2,6 +2,8 @@
 // const express = require('express');
 
 // hacer el nuevo import
+
+// en el package.json poner "type": "module", vea el package.json y verá
 import Express from 'express';
 import Cors from 'cors';
 import dotenv from 'dotenv';
@@ -17,6 +19,8 @@ import autorizacionEstadoUsuario from './middleware/autorizacionEstadoUsuario.js
 dotenv.config({ path: './.env' });
 
 const app = Express();
+
+// casi siempre se le pone app se le agregan las rutas, métodos todo lo que necesitamos
 
 app.use(Express.json());
 app.use(Cors());
@@ -43,8 +47,10 @@ app.use(rutasUsuario);
 app.use(rutasVenta);
 
 const main = () => {
-  return app.listen(process.env.PORT, () => {
-    console.log(`escuchando puerto ${process.env.PORT}`);
+  return app.listen(5000, () => {
+    //Esto es lo que prende el servidor
+    //Cambié al puerto 500 para hacer purebas pero usar el .env
+    console.log('escuchando puerto');
   });
 };
 
