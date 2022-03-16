@@ -26,10 +26,10 @@ var jwtCheck = jwt({
     cache: true,
     rateLimit: true,
     jwksRequestsPerMinute: 5,
-    jwksUri: 'https://misiontic-concesionario.us.auth0.com/.well-known/jwks.json',
+    jwksUri: 'https://misiontic-concesionario-stefano.us.auth0.com/.well-known/jwks.json',
   }),
-  audience: 'api-autenticacion-concesionario-mintic',
-  issuer: 'https://misiontic-concesionario.us.auth0.com/',
+  audience: 'api-autenticacion-concesionario-mintic-stefano',
+  issuer: 'https://misiontic-concesionario-stefano.us.auth0.com/',
   algorithms: ['RS256'],
 });
 
